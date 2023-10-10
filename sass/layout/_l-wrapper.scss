@@ -1,0 +1,8 @@
+@use "../setting" as s;
+@use "../mixin" as m;
+
+.l-wrapper {
+    max-width: 1140px;
+    margin: 0 auto;
+    padding: 0 15px;
+  }

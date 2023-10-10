@@ -1,0 +1,27 @@
+@use "../../setting" as s;
+@use "../../mixin" as m;
+
+.c-section__title {
+    font-weight: bold;
+    line-height: 1.2;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    color: s.$color-primary;
+
+    @include m.font-size(36);
+    @include m.mq(md) {
+      @include m.font-size(30);
+    }
+
+    &--white {
+        color: #fff;
+      }
+}
+
+.c-section__subtitle {
+    display: block;
+    margin-top: 5px;
+    letter-spacing: 0.05em;
+
+    @include m.font-size(13);
+}

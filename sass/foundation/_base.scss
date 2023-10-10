@@ -1,0 +1,37 @@
+@use "../setting" as s;
+@use "../mixin" as m;
+
+html {
+  font-size: 100%;
+}
+
+body {
+  font-family: "Montserrat", Arial, "Hiragino Kaku Gothic ProN", "Hiragino Sans",
+    Meiryo, sans-serif;
+  line-height: 1.8;
+  color: s.$color-text;
+  letter-spacing: 0.05em;
+  @include m.font-size(15);
+  @include m.mq(md) {
+    @include m.font-size(14);
+  }
+}
+
+a {
+  transition: 0.3s;
+  text-decoration: none;
+  color: s.$color-primary;
+
+  &:hover {
+    text-decoration: underline;
+  }
+}
+
+img {
+  max-width: 100%;
+  vertical-align: bottom;
+}
+
+li {
+  list-style: none;
+}

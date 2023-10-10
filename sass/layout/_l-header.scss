@@ -1,0 +1,49 @@
+@use "../setting" as s;
+@use "../mixin" as m;
+
+.l-header {
+  position: fixed;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  top: 0;
+  width: 100%;
+  height: 86px;
+  padding: 0 30px;
+  transition: all 0.3s;
+  z-index: 20;
+
+  @include m.mq(md) {
+    height: 64px;
+    padding: 0 15px;
+  }
+
+  &.is-active {
+    height: 64px;
+    background-color: s.$color-primary-dark;
+  }
+
+  // .p-header__menu .p-header__list {
+  //   display: flex;
+  //   padding-left: 30px;
+
+  //   .p-header__item {
+  //     font-weight: bold;
+
+  //     &:not(:last-child) {
+  //       margin-right: 25px;
+
+  //       @include m.mq(md) {
+  //         margin-right: 0;
+  //       }
+  //     }
+      
+  //     .p-header__link {
+  //       position: relative;
+  //       display: inline-block;
+  //       color: #fff;
+  //     }
+  //   }
+  // }
+}
+

@@ -1,0 +1,67 @@
+@use "../../setting" as s;
+@use "../../mixin" as m;
+
+.c-btn {
+  position: relative;
+  font-weight: bold;
+  line-height: 1.4;
+  display: inline-block;
+  width: 220px;
+  padding: 18px 0;
+  transition: 0.3s;
+  text-align: center;
+  text-decoration: none;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: #fff;
+  border-radius: 50px;
+  background-image: s.$color-btn;
+  background-size: 200% auto;
+
+  @include m.font-size(14);
+
+  &::after {
+    position: absolute;
+    top: 50%;
+    right: 1.5em;
+    font-family: "Font Awesome 5 Free";
+    font-weight: 900;
+    content: "\f0da";
+    transition: 0.3s;
+    -webkit-transform: translateY(-50%);
+    transform: translateY(-50%);
+
+    @include m.font-size(14);
+  }
+  &:hover {
+    text-decoration: none;
+    background-position: right center;
+    &::after {
+      right: 1.2em;
+
+      @include m.mq(md) {
+        right: 1.5em;
+      }
+    }
+  }
+
+  &--block {
+    display: block;
+    max-width: 300px;
+    margin: 0 auto;
+  }
+
+  &--center {
+    display: block;
+    margin-right: auto;
+    margin-left: auto;
+  }
+
+  &--transparent {
+    border: 1px solid #fff;
+    background: none;
+    &:hover {
+      opacity: 0.8;
+    }
+  }
+}

@@ -1,0 +1,25 @@
+@use "../../setting" as s;
+@use "../../mixin" as m;
+
+nav.p-global__nav .p-global-nav__list {
+  display: flex;
+  padding-left: 30px;
+
+  .p-global-nav__item {
+    font-weight: bold;
+
+    &:not(:last-child) {
+      margin-right: 25px;
+
+      @include m.mq(md) {
+        margin-right: 0;
+      }
+    }
+
+    .p-global-nav__link {
+      position: relative;
+      display: inline-block;
+      color: #fff;
+    }
+  }
+}

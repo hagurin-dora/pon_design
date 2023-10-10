@@ -1,0 +1,10 @@
+@use "../setting" as s;
+@use "../mixin" as m;
+
+.l-section {
+  padding: 70px 0;
+
+  @include m.mq(md) {
+    padding: 40px 0;
+  }
+}

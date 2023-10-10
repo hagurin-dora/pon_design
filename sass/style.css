@@ -1,0 +1,231 @@
+html {
+  font-size: 100%;
+}
+
+body {
+  font-family: "Montserrat", Arial, "Hiragino Kaku Gothic ProN", "Hiragino Sans", Meiryo, sans-serif;
+  line-height: 1.8;
+  color: #333;
+  letter-spacing: 0.05em;
+  font-size: 15px;
+  font-size: 0.9375rem;
+}
+@media screen and (max-width: 768px) {
+  body {
+    font-size: 14px;
+    font-size: 0.875rem;
+  }
+}
+
+a {
+  transition: 0.3s;
+  text-decoration: none;
+  color: #391e88;
+}
+a:hover {
+  text-decoration: underline;
+}
+
+img {
+  max-width: 100%;
+  vertical-align: bottom;
+}
+
+li {
+  list-style: none;
+}
+
+.l-header {
+  position: fixed;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  top: 0;
+  width: 100%;
+  height: 86px;
+  padding: 0 30px;
+  transition: all 0.3s;
+  z-index: 20;
+}
+@media screen and (max-width: 768px) {
+  .l-header {
+    height: 64px;
+    padding: 0 15px;
+  }
+}
+.l-header.is-active {
+  height: 64px;
+  background-color: #21054d;
+}
+
+.l-section {
+  padding: 70px 0;
+}
+@media screen and (max-width: 768px) {
+  .l-section {
+    padding: 40px 0;
+  }
+}
+
+.l-wrapper {
+  max-width: 1140px;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+
+.c-btn {
+  position: relative;
+  font-weight: bold;
+  line-height: 1.4;
+  display: inline-block;
+  width: 220px;
+  padding: 18px 0;
+  transition: 0.3s;
+  text-align: center;
+  text-decoration: none;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: #fff;
+  border-radius: 50px;
+  background-image: linear-gradient(to right, #7633a4 0%, #250d65 51%, #7633a4 100%);
+  background-size: 200% auto;
+  font-size: 14px;
+  font-size: 0.875rem;
+}
+.c-btn::after {
+  position: absolute;
+  top: 50%;
+  right: 1.5em;
+  font-family: "Font Awesome 5 Free";
+  font-weight: 900;
+  content: "\f0da";
+  transition: 0.3s;
+  transform: translateY(-50%);
+  font-size: 14px;
+  font-size: 0.875rem;
+}
+.c-btn:hover {
+  text-decoration: none;
+  background-position: right center;
+}
+.c-btn:hover::after {
+  right: 1.2em;
+}
+@media screen and (max-width: 768px) {
+  .c-btn:hover::after {
+    right: 1.5em;
+  }
+}
+.c-btn--block {
+  display: block;
+  max-width: 300px;
+  margin: 0 auto;
+}
+.c-btn--center {
+  display: block;
+  margin-right: auto;
+  margin-left: auto;
+}
+.c-btn--transparent {
+  border: 1px solid #fff;
+  background: none;
+}
+.c-btn--transparent:hover {
+  opacity: 0.8;
+}
+
+.c-section__title {
+  font-weight: bold;
+  line-height: 1.2;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  color: #391e88;
+  font-size: 36px;
+  font-size: 2.25rem;
+}
+@media screen and (max-width: 768px) {
+  .c-section__title {
+    font-size: 30px;
+    font-size: 1.875rem;
+  }
+}
+.c-section__title--white {
+  color: #fff;
+}
+
+.c-section__subtitle {
+  display: block;
+  margin-top: 5px;
+  letter-spacing: 0.05em;
+  font-size: 13px;
+  font-size: 0.8125rem;
+}
+
+nav.p-global__nav .p-global-nav__list {
+  display: flex;
+  padding-left: 30px;
+}
+nav.p-global__nav .p-global-nav__list .p-global-nav__item {
+  font-weight: bold;
+}
+nav.p-global__nav .p-global-nav__list .p-global-nav__item:not(:last-child) {
+  margin-right: 25px;
+}
+@media screen and (max-width: 768px) {
+  nav.p-global__nav .p-global-nav__list .p-global-nav__item:not(:last-child) {
+    margin-right: 0;
+  }
+}
+nav.p-global__nav .p-global-nav__list .p-global-nav__item .p-global-nav__link {
+  position: relative;
+  display: inline-block;
+  color: #fff;
+}
+
+.p-main-visual {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  color: #fff;
+  background-image: url(../img/hero.jpg);
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+}
+.p-main-visual .p-main-visual__wrapper {
+  padding: 0 30px;
+  text-align: center;
+}
+.p-main-visual .p-main-visual__wrapper .p-main-visual__title {
+  position: relative;
+  font-weight: bold;
+  line-height: 1;
+  font-size: 4.5rem;
+}
+.p-main-visual .p-main-visual__wrapper .p-main-visual__subtitle {
+  margin-top: 15px;
+  margin-bottom: 48px;
+  letter-spacing: 0.1em;
+  font-size: 1.5rem;
+}
+
+.p-news__wrapper {
+  display: flex;
+  max-width: 950px;
+}
+@media screen and (max-width: 768px) {
+  .p-news__wrapper {
+    display: block;
+  }
+}
+.p-news__heading {
+  margin-right: 50px;
+}
+@media screen and (max-width: 768px) {
+  .p-news__heading {
+    margin-right: 0;
+    margin-bottom: 30px;
+    text-align: center;
+  }
+}/*# sourceMappingURL=style.css.map */

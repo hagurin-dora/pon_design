@@ -1,0 +1,23 @@
+@use "../../setting" as s;
+@use "../../mixin" as m;
+
+.p-news {
+    &__wrapper {
+      display: flex;
+      max-width: 950px;
+  
+      @include m.mq(md) {
+        display: block;
+      }
+    }
+
+    &__heading {
+        margin-right: 50px;
+    
+        @include m.mq(md) {
+          margin-right: 0;
+          margin-bottom: 30px;
+          text-align: center;
+        }
+      }
+}
